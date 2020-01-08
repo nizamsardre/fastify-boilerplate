@@ -1,0 +1,18 @@
+config:
+  target: 'http://localhost:8082/appdev/api/v1'
+  phases:
+    - duration: 60
+      arrivalRate: 1
+  processor: './proc.js'
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+scenarios:
+  - flow:
+    - get:
+        url: "/galleries/image?imageName=689898.jpeg&width=500&height=500"
+        # beforeRequest: 'setJSONBody'
+        # afterResponse: 'logResponse'
+        # formData:
+          # sizes:  [{"w":150,"h":150},{"w":250,"h":150},{"w":350,"h":150}]
+
