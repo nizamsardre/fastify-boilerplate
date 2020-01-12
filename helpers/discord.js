@@ -3,7 +3,7 @@ const { Client, Attachment } = require("discord.js");
 const client = new Client();
 let isReady = false
 client.on('error', function (d) {
-  console.log(d.responsee, 'discord client err')
+  console.log(d.response, 'discord client err')
 })
 client.on('ready', function (d) {
   isReady = true
@@ -61,7 +61,7 @@ function sendVideo(text = 'eqeq', video) {
 
 
 
-client.login(config.discord).then(a => {
+client.login(config.discordToken).then(a => {
   console.log(a, 'discord client login')
 }).catch(e => {
   console.log(e, 'discord login err')

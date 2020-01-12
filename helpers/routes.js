@@ -1,5 +1,6 @@
 const fs = require('fs')
 const modules = require('_/modules')
+
 const registerRoutes = (fastify) => {
 
   Object.keys(modules).forEach(key => {
@@ -11,7 +12,7 @@ const registerRoutes = (fastify) => {
   let controllers = fs.readdirSync(`./modules/${moduleName}/controller`)
   controllers.forEach(controller=>{
     const routers = require(`_/modules/${moduleName}/controller/${controller}`)
-    fastify.register(routers,{prefix:`/app/api/v1/${module.url}`})
+    fastify.register(routers, { prefix: `/api/v1/${module.url}` })
     // routers.forEach(router => {
     //   fastify.route(router, {}{prefix:`/app/api/v1/${module.url}`})
     // })

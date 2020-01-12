@@ -2,6 +2,7 @@ public/uploads/images/galleries/*
 userCookiePath.txt
 userDevicePath.txt
 .vscode
+config.js
 yarn.lock
 # Logs
 logs

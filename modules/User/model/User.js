@@ -7,9 +7,6 @@ const schema = new Schema({
   userName:{ type: String, unique: true },
   followings: [{default:[],type:Array}],
   enabled: { default: true, type: Boolean },
-  roles: [
-    { type: mongoose.Types.ObjectId, ref: 'role' }
-  ],
 
 
 }, { timestamps: true });
